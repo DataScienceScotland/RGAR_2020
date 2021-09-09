@@ -1,0 +1,61 @@
+
+/*Format all body text to large and wide spacing */
+p {
+  font-size: large;
+  line-height: 1.8;
+}
+
+/* Underline all hyperlinks */
+a {
+  text-decoration: underline;
+}
+
+/* Format bullet point text to large */
+li {
+  font-size: large;
+}
+
+/* Format all lines in charts to have rounded */
+g.highcharts-series path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Format size of definition icon*/
+img[alt="information icon"] { 
+  width: 15px; 
+}
+
+/* Remove italics from subtitle */
+i, cite, em, var, address, dfn {
+    font-style: normal;
+} 
+
+/* Format text colour in info boxes */
+.alert-info {
+    color: #333;
+}
+
+/* Format definiton boxes */
+.alert-define {
+    color: #333;
+    background-color: #EBEBEB;
+    border-color: #EBEBEB;
+}
+
+/* Format statistician quote boxes */
+.alert-quote {
+    color: #333;
+    background-color: white;
+    border-color: #b9b9b9;
+}
+
+/* Format figure caption font-size */
+figure {
+  font-size: large;
+}
+
+/* Format text in tables*/
+table {
+    font-size: large;
+}

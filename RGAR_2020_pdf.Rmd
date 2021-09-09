@@ -1,0 +1,589 @@
+---
+title: "Scotland's Population 2020"
+header-includes: \usepackage{helvet} \renewcommand{\familydefault}{\sfdefault} \usepackage{lastpage}
+output:
+  pdf_document: default
+  word_document: default
+subtitle: The Registrar General's Annual Review of Demographic Trends
+fontsize: 12pt
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, out.width = '100%')
+library(htmltools)
+for (script in list.files("pdf_scripts", full.names = TRUE)) {
+  source(script)
+}
+
+```
+
+`r text_output("summary", "details", subtitle = F) `
+
+
+```{r, out.width = "90%"}
+knitr::include_graphics("images/SUMMARY_scotland_colours.png")
+```
+
+`r text_output("summary", "copyright", subtitle = F)`
+
+&nbsp;
+
+\pagebreak
+
+## Summary
+
+![]("images/PL_portrait.png")
+
+  
+`r text_output("summary", "summary", subtitle = F)`
+
+`r text_output("summary", "name", subtitle = F)`
+
+&nbsp;
+
+\pagebreak
+
+## COVID-19 deaths
+   
+```{r, out.width = "50%"}
+knitr::include_graphics("images/JR_portrait.png")
+```
+
+
+`r text_output("covid_19","quote", subtitle = F)`
+
+`r text_output("covid_19","name", subtitle = F)`
+
+
+
+`r text_output("covid_19", "two_waves_text", subtitle = T)`
+
+&nbsp;
+
+**COVID-19 deaths in Scotland by location of death, March 2020 to August 2021**
+```{r echo=FALSE}
+
+  knitr::include_graphics("images/plots/COVID_location_deaths.png")
+
+```
+
+Source: [Deaths involving COVID-19 in Scotland](https://www.nrscotland.gov.uk/covid19stats)
+
+&nbsp;
+
+`r text_output("covid_19", "two_waves_find_out_more", subtitle = F)`
+
+`r text_output("covid_19", "age_text", subtitle = T)`
+
+
+&nbsp;
+
+\pagebreak
+
+**Excess deaths by age in Scotland, March 2020 to August 2021**
+```{r echo=FALSE}
+
+  knitr::include_graphics("images/plots/COVID_deaths_age.png")
+
+```
+
+Source: [Deaths involving COVID-19 in Scotland](https://www.nrscotland.gov.uk/covid19stats)
+
+`r text_output("covid_19", "define_excess_deaths", subtitle = F)`
+
+&nbsp;
+
+`r text_output("covid_19", "deprivation_text", subtitle = T)`
+
+
+&nbsp;
+
+**Age standardised death rates per 100,000 people from COVID-19 by SIMD quintile, Scotland, March 2020 to August 2021**
+
+```{r}
+
+knitr::kable(datasets[["COVID_deathrate"]],
+                         align = c("l", "r", "r", "r"))
+```
+
+<!-- Cause of death | Mortality rate in the most deprived areas (SIMD 1)	| 	Mortality rate in the least deprived areas (SIMD 5)	 | Ratio * -->
+<!-- ----------|------------------------------|--------------------------|------ -->
+<!-- All causes |	2395.5	| 1260.7 | 1.9 -->
+<!-- COVID-19 |	326.3	| 137.3 | 2.4 -->
+
+<!-- *between mortality rates in the most and least deprived areas -->
+
+Source: [Deaths involving COVID-19 in Scotland](https://www.nrscotland.gov.uk/covid19stats)
+
+`r text_output("covid_19", "define_SIMD", subtitle = F)`
+
+&nbsp;
+
+`r text_output("covid_19", "deprivation_find_out_more", subtitle = F)`
+
+`r text_output("covid_19", "ethnicity_text", subtitle = T)`
+
+`r text_output("covid_19", "ethnicity_find_out_more", subtitle = F)`
+
+`r text_output("covid_19", "disability_text", subtitle = T)`
+
+`r text_output("covid_19", "disability_find_out_more", subtitle = F)`
+
+`r text_output("covid_19", "pre_existing_conditions_text", subtitle = T)`
+
+`r text_output("covid_19", "excess_causes_of_death_text", subtitle = T)`
+
+\pagebreak
+
+**Excess deaths by cause of death in Scotland, January to December 2020**
+```{r echo=FALSE}
+
+  knitr::include_graphics("images/plots/COVID_deaths_type_2.png")
+
+```
+
+Source: [Deaths from specific causes](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths)
+
+`r text_output("covid_19", "excess_causes_of_death_after_chart", subtitle = F)`
+
+
+`r text_output("covid_19", "other_causes_of_death_text", subtitle = T)`
+
+
+**Excess deaths by cause of death in Scotland, January to December 2020**
+```{r echo=FALSE}
+
+  knitr::include_graphics("images/plots/COVID_deaths_type_1.png")
+
+```
+
+Source: [Deaths from specific causes](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths)
+
+`r text_output("covid_19", "other_causes_of_death_after_chart", subtitle = F)`
+
+&nbsp;
+
+
+\pagebreak
+
+## Health inequality
+
+  
+```{r, out.width = "50%"}
+knitr::include_graphics("images/LP_portrait.png")
+```
+
+
+`r text_output("health_inequality", "quote", subtitle = F)`
+
+`r text_output("health_inequality", "name", subtitle = F)`
+  
+
+`r text_output("health_inequality", "life_expectancy_text", subtitle = T)`
+
+\pagebreak
+
+**Life expectancy at birth in Scotland by sex compared to other countries, 1980 to 2019**
+```{r}
+knitr::include_graphics("images/plots/INEQUALITY_life_expectancy.png")
+
+```
+
+Source: [Life Expectancy in Scotland](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/life-expectancy-at-scotland-level)
+
+&nbsp;
+
+`r text_output("health_inequality", "life_expectancy_after_chart", subtitle = F)`
+
+
+`r text_output("health_inequality", "life_expectancy_find_out_more", subtitle = F)`
+
+
+`r text_output("health_inequality", "deprivation_text", subtitle = T)`
+
+
+`r text_output("health_inequality", "define_HLE", subtitle = F)`
+
+
+&nbsp;
+
+`r text_output("health_inequality", "deprivation_after_definition", subtitle = F)`
+
+```{r}
+knitr::kable(datasets[["INEQUALITY_healthy_LE"]],
+                         align = c("c", "c", "c"))
+```
+
+Source: [Healthy Life Expectancy in Scotland](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/healthy-life-expectancy-in-scotland)
+
+&nbsp;
+
+`r text_output("health_inequality", "deprivation_after_table", subtitle = F)`
+
+`r text_output("health_inequality", "deprivation_find_out_more", subtitle = F)`
+
+`r text_output("health_inequality", "drug_deaths_text", subtitle = T)`
+
+\pagebreak
+
+**Drug-related death rate per 100,000 population by age group in Scotland, 2000 to 2020**
+```{r}
+knitr::include_graphics("images/plots/INEQUALITY_drug_deaths.png")
+
+```
+
+Source: [Drug Related Deaths in Scotland](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/drug-related-deaths-in-scotland)
+
+&nbsp;
+
+`r text_output("health_inequality", "drug_deaths_after_chart", subtitle = F)`
+
+`r text_output("health_inequality", "suicides_text", subtitle = T)`
+
+`r text_output("health_inequality", "drug_deaths_find_out_more", subtitle = F)`
+
+&nbsp;
+
+\pagebreak
+
+## Migration
+
+```{r, out.width = "50%"}
+
+knitr::include_graphics("images/ER_portrait.png")
+```
+
+
+`r text_output("migration", "quote", subtitle = F)`
+
+`r text_output("migration", "name", subtitle = F)`
+
+
+`r text_output("migration", "migration_text", subtitle = T)`
+
+
+&nbsp;
+
+\pagebreak
+
+**Natural change and net migration in Scotland, 1952 to 2020**
+```{r echo=FALSE}
+
+knitr::include_graphics("images/plots/MIGRATION_migration.png")
+```
+
+Source: [Mid-year population estimates](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates/mid-2020)
+
+
+&nbsp;
+
+`r text_output("migration", "migration_after_chart", subtitle = F)`
+
+
+`r text_output("migration", "migration_find_out_more", subtitle = F)`
+
+
+`r text_output("migration", "non_british_text", subtitle = T)`
+
+&nbsp;
+
+\pagebreak
+
+**Number of non-British nationals in Scotland by country, 2020**
+```{r echo=FALSE}
+
+  knitr::include_graphics("images/plots/MIGRATION_non_british.png")
+  
+```
+
+Source: [Population by Country of Birth and Nationality, Scotland, July 2019 to June 2020](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/population-by-country-of-birth-and-nationality/jul-19-jun-20)
+
+
+`r text_output("migration", "non_british_EU_definitions", subtitle = F)`
+
+&nbsp;
+
+`r text_output("migration", "non_british_after_chart", subtitle = F)`
+
+
+`r text_output("migration", "non_british_find_out_more", subtitle = F)`
+
+
+`r text_output("migration", "eu_migration_text", subtitle = T)`
+
+&nbsp;
+
+\pagebreak
+
+**Population projection variants in Scotland, 2019 to 2043**
+
+Note: Vertical axis does not start at 0.
+```{r echo=FALSE}
+
+ knitr::include_graphics("images/plots/MIGRATION_projections.png")
+
+```
+
+Source: [Projected Population of Scotland (2018-based): Additional variants using alternative European Union migration assumptions](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections/population-projections-scotland/2018-based/eu-migration-variants)
+
+&nbsp;
+
+`r text_output("migration", "eu_migration_after_chart", subtitle = F)`
+
+`r text_output("migration", "eu_migration_find_out_more", subtitle = F)`
+
+`r text_output("migration", "population_text", subtitle = T)`
+
+&nbsp;
+
+**Projected population change, 2018 to 2028**
+```{r}
+knitr::include_graphics("images/plots/map.png")
+```
+
+Source: [Population Projections for Scottish Areas (2018-based)](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections/sub-national-population-projections/2018-based)
+
+`r text_output("migration", "population_after_chart", subtitle = F)` 
+
+&nbsp;
+
+`r text_output("migration", "population_find_out_more", subtitle = F)`
+
+&nbsp;
+
+\pagebreak
+
+## Ageing population
+
+```{r, out.width = "50%"}
+
+knitr::include_graphics("images/BW_portrait.png")
+
+```
+
+`r text_output("ageing_population", "quote", subtitle = F)`
+
+`r text_output("ageing_population", "name", subtitle = F)`
+  
+`r text_output("ageing_population", "population_text", subtitle = T)`
+
+`r text_output("ageing_population", "population_after_photo", subtitle = F)`
+
+&nbsp;
+
+**Population profiles by age group in Scotland, 1931, 2019, and 2043**
+```{r}
+
+knitr::include_graphics("images/plots/AGEING_POP_age_profile.png")
+
+```
+
+Source: [Population Estimates Time Series Data](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates/population-estimates-time-series-data), [Projected Population of Scotland (2018-based)](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections/population-projections-scotland/2018-based)
+
+&nbsp;
+
+
+`r text_output("ageing_population", "population_find_out_more", subtitle = F)`
+
+
+`r text_output("ageing_population", "cause_of_death_text", subtitle = T)`
+
+
+&nbsp;
+
+**Changes in causes of death in Scotland, 2000 to 2020**
+```{r}
+knitr::include_graphics("images/plots/AGEING_POP_causes_of_death.png")
+
+```
+
+Source: [Causes of Death](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/2020/list-of-data-tables#section6)
+
+&nbsp;
+
+
+`r text_output("ageing_population", "cause_of_death_find_out_more", subtitle = F)`
+
+`r text_output("ageing_population", "household_text", subtitle = T)`
+
+`r text_output("ageing_population", "household_find_out_more", subtitle = F)`
+
+&nbsp;
+
+\pagebreak
+
+## Marriage
+
+  
+```{r, out.width = "50%"}
+knitr::include_graphics("images/DB_portrait.png")
+```
+
+`r text_output("same_sex_marriage", "quote", subtitle = F)`
+
+`r text_output("same_sex_marriage", "name", subtitle = F)`
+
+
+`r text_output("same_sex_marriage", "marriage_text", subtitle = T)`
+
+&nbsp;
+
+\pagebreak
+
+**Civil partnerships and same-sex marriages in Scotland, 2005 to 2020**
+```{r}
+knitr::include_graphics("images/plots/MARRIAGE_same_sex_marriage.png")
+
+```
+
+Source: [Marriages and Civil Partnership Time Series Data](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/marriages-and-civil-partnerships/marriages-and-civil-partnership-time-series-data)
+
+&nbsp;
+
+
+`r text_output("same_sex_marriage", "marriage_find_out_more", subtitle = F)`
+
+
+`r text_output("same_sex_marriage", "humanist_text", subtitle = T)`
+
+
+&nbsp;
+
+\pagebreak
+
+**Marriages by type of ceremony in Scotland, 1961 to 2020**
+```{r}
+knitr::include_graphics("images/plots/MARRIAGE_marriage_type.png")
+
+```
+
+Source: [Marriages and Civil Partnerships](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/2019/list-of-data-tables#section7)
+
+&nbsp;
+
+`r text_output("same_sex_marriage", "humanist_find_out_more", subtitle = F)`
+
+&nbsp;
+
+
+
+\pagebreak
+
+## Historical demographic changes
+
+  
+```{r, out.width = "50%"}
+knitr::include_graphics("images/JA_portrait.png")
+```
+
+   
+`r text_output("historical_changes", "quote", subtitle = F)`
+
+`r text_output("historical_changes", "name", subtitle = F)`
+  
+
+`r text_output("historical_changes", "deaths_text", subtitle = T)`
+
+\pagebreak
+
+**Stillbirths, child mortality, and infant mortality in Scotland, 1901 to 2020**
+```{r}
+knitr::include_graphics("images/plots/HISTORICAL_CHANGES_child_mortality.png")
+
+```
+
+Source: [Deaths time series data](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/deaths-time-series-data)
+
+
+&nbsp;
+
+`r text_output("historical_changes", "deaths_after_chart", subtitle = F)`
+
+
+`r text_output("historical_changes", "deaths_find_out_more", subtitle = F)`
+
+
+`r text_output("historical_changes", "births_text", subtitle = T)`
+
+
+**Births and deaths in Scotland, 1855 to 2020**
+```{r}
+
+knitr::include_graphics("images/plots/HISTORICAL_CHANGES_births_deaths.png")
+
+```
+
+Source: [Births time series data](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/births/births-time-series-data), [Deaths time series data](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/deaths-time-series-data)
+
+&nbsp;
+
+`r text_output("historical_changes", "births_after_chart", subtitle = F)`
+
+
+`r text_output("historical_changes", "births_find_out_more", subtitle = F)`
+
+
+`r text_output("historical_changes", "baby_boom_text", subtitle = T)`
+
+<!-- Image of children in yard of Beckford Street School -->
+```{r, out.width = "50%"}
+ knitr::include_graphics("images/HISTORICAL_CHANGES_children.jpg")
+```
+
+Large crowd of children in yard of Beckford Street School [Image Library - ScotlandsPeople](https://www.scotlandspeople.gov.uk/product/image-library/537)
+
+&nbsp;
+
+`r text_output("historical_changes", "baby_boom_after_photo_1", subtitle = F)`
+
+<!-- Image of maternity hospital -->
+
+
+
+```{r}
+ knitr::include_graphics("images/HISTORICAL_CHANGES_nursery.jpg")
+```
+
+
+View of baby nursery at Bellshill Maternity Hospital, Lanarkshire. [Image Library - ScotlandsPeople](https://www.scotlandspeople.gov.uk/product/image-library/1244?combine=nurse&combine_1=&field_year_from_value=&field_year_to_value=)
+
+
+&nbsp;
+
+`r text_output("historical_changes", "baby_boom_after_photo_2", subtitle = F)`
+
+**Mean age at marriage in Scotland, 1855 to 2020**
+```{r}
+knitr::include_graphics("images/plots/HISTORICAL_CHANGES_marriage_age.png")
+
+```
+
+Source: [Marriages and civil partnerships](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/2020/list-of-data-tables#section7)
+
+`r text_output("historical_changes", "baby_boom_find_out_more", subtitle = F)`
+
+&nbsp;
+
+`r text_output("historical_changes", "fewer_deaths_text", subtitle = T)`
+
+
+<!-- Image of Basham's runner -->
+
+
+
+```{r}
+ knitr::include_graphics("images/HISTORICAL_CHANGES_trenches.jpg")
+```
+
+
+Kenneth Basham's runner (East Surreys) in a trench in the Somme area, 1916. [Image Library - ScotlandsPeople](https://www.scotlandspeople.gov.uk/product/image-library/755?combine=&combine_1=AAA00675&field_year_from_value=&field_year_to_value=)
+
+&nbsp;
+
+`r text_output("historical_changes", "fewer_deaths_after_photo", subtitle = F)`
+
+
+`r text_output("historical_changes", "fewer_deaths_find_out_more", subtitle = F)`
+
+
